@@ -1,16 +1,13 @@
-#!/bin/bash
 #include <stdio.h>
 /**
+ *   main - Entry point
  *
- *  * main - Entry point
+ *   Return: Always 0 (Success)
  *
- *   *
- *
- *    * Return: Always 0 (Success)
- *
- *     */
-int main(void){
-	char message[]="\"Programming is like building a multilingual puzzle";
+ */
+int main(void)
+{
+	char message[] = "\"Programming is like building a multilingual puzzle";
 	puts(message);
 	return(0);
 }
