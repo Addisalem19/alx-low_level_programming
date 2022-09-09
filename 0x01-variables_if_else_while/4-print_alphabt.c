@@ -12,7 +12,7 @@ int main(void)
 
 	while (c < len)
 	{
-		if (c == 'q' || c =='e')
+		if (c == 'q' || c == 'e')
 		{
 			++c;
 			continue;
