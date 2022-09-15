@@ -1,5 +1,5 @@
-#ifndef MAIN_H
-#define MAIN_H
+#ifndef _holberton_h_
+#define _holberton_h_
 
 int _isupper(int c);
 
