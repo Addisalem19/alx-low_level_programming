@@ -1,5 +1,3 @@
-#include "main.h"
-
 /**
  * reset_to_98 - updates n to 98
  * @n: The number to be updated
