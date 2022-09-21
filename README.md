@@ -1,1 +1,1 @@
-It is all about C programing
+It's all about C programming
