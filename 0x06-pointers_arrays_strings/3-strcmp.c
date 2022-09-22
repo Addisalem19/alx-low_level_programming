@@ -1,3 +1,5 @@
+#include "main.h"
+
 /**
  * _strcmp - compares two strings
  * @s1: the first string
@@ -15,5 +17,6 @@ int _strcmp(char *s1, char *s2)
 		op = *(s1 + i) - *(s2 + i);
 		i++;
 	}
+
 	return (op);
 }
