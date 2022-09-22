@@ -2,23 +2,18 @@
  * cap_string - capitalizes all words of a string
  * @s: input string
  *
- * Return: the pointer to dest
+ * Return: char
  */
-char *cap_string(char *s)
+char *string_toupper(char *str)
 {
-	int i, c, alpha, maxAlpha;
-
-	alpha = 97;
-	maxAlpha = alpha + 26;
+	int i;
 
 	for (i = 0; str[i] != '\0'; i++)
 	{
-		c = str[i];
-		if ((c >= alpha) && (c < maxAlpha))
+		if (str[i] >= 'a' && str[i] <= 'z')
 		{
-			str[i] = c - alpha + 65;
+			str[i] = str[i] - 32;
 		}
 	}
-
 	return (str);
 }
