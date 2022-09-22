@@ -1,38 +1,27 @@
 /**
  * _strncat - concatenates two strings
- * @src: The first part o the string
- * @dest: The second part of the string
- * @n: Total num ber of bytes to take from src
+ * @dest: destination
+ * @src: source
+ * @n: amount of bytes used from src
  *
- * Return: dest pointer
+ * Return: the pointer to dest
  */
 char *_strncat(char *dest, char *src, int n)
 {
-	int i, j, len;
-	int terminate = 1;
+	int count = 0, count2 = 0;
 
-	i = 0;
-	while (src[i] != '\0')
-		i++;
-	len = i;
-
-	i = 0;
-	while (dest[i] != '\0')
-		i++;
-
-	j = 0;
-	if (n > len)
+	while (*(dest + count) != '\0')
 	{
-		n = len;
-		terminate = 0;
+		count++;
 	}
-	while (j < n)
+
+	while (count2 < n)
 	{
-		dest[i] = src[j];
-		j++;
-		i++
+		*(dest + count) = *(src + count2);
+		if (*(src + count2) == '\0')
+			break;
+		count++;
+		count2++;
 	}
-	if (terminate)
-		dest[i] = '\0';
 	return (dest);
 }
