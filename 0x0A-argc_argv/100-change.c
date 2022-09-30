@@ -1,4 +1,3 @@
-#include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -12,46 +11,30 @@
  */
 int main(int argc, char *argv[])
 {
-	int cents, amount;
-	int flag;
+	int cents, ncoins = 0;
 
-	flag = 0;
-	if (argc == 2)
-	{
-		cents = atoi(argv[1]);
-		if (cents > 0)
-			amount = change(cents);
-		else
-			amount = 0;
-		printf("%d\n", amount);
-	}
-	else
+	if (argc == 1 || argc > 2)
 	{
 		printf("Error\n");
-		flag = 1;
+		return (1);
 	}
 
-	return (flag);
-}
+	cents = atoi(argv[1]);
 
-/**
- * change - Compute change
- * @cents: The number of cents@cents: The number of cents
- *
- * Return: int
- */
-int change(int cents)
-{
-	int divisors[] = {25, 10, 5, 2, 1};
-	int amount;
-	int i;
-
-	amount = 0;
-	for (i = 0; i < 5; i++)
+	while (cents > 0)
 	{
-		amount += cents / divisors[i];
-		cents = cents % divisors[i];
+		if (cents >= 25)
+			cents -= 25;
+		else if (cents >= 10)
+			cents -= 10;
+		else if (cents >= 5)
+			cents -= 5;
+		else if (cents >= 2)
+			cents -= 2;
+		else if (cents >= 1)
+			cents -= 1;
+		ncoins += 1;
 	}
-
-	return (amount);
+	printf("%d\n", ncoins);
+	return (0);
 }
