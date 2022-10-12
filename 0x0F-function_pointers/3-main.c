@@ -3,7 +3,6 @@
 /**
  * main - This program calculates two numbers based on given
  * operator
- *
  * @argc: Argument count
  * @argv: Argument list
  *
@@ -18,7 +17,7 @@ int main(int argc, char **argv)
 	if (argc != 4)
 	{
 		printf("Error\n");
-		exit(98);
+	        exit(98);
 	}
 
 	op = argv[2];
