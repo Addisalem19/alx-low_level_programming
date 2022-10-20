@@ -1,8 +1,16 @@
-#include <stdio>
+SECTION .data
+msg:	db "Hello, Holberton", 0
+fmt:	db "%s", 10, 0
 
-int main(void)
-{
-       printf("Hello, Holberton\n");
+        SECTION .text
+        extern printf
+        global main
 
-       return (0);
-}
+main:
+        mov esi, msg
+        mov edi, fmt
+	mov eax, 0
+	call printf
+
+        mov eax, 0
+	ret
